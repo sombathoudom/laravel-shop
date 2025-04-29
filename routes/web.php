@@ -13,3 +13,7 @@ Route::get('/', function () {
 Route::get('/product', function () {
     return inertia('ProductDetail');
 });
+
+Route::get('/checkout', function () {
+    return inertia('Checkout');
+});
