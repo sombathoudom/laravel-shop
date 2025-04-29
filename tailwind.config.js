@@ -4,11 +4,8 @@ const { fontFamily } = require("tailwindcss/defaultTheme")
 module.exports = {
   darkMode: ["class"],
     content: [
-        "./resources/**/*.blade.php",
-        "./resources/**/*.js",
-        "./resources/**/*.jsx",
-        "./resources/**/*.ts",
-        "./resources/**/*.tsx",
+        './resources/views/**/*.blade.php',
+        './resources/js/**/*.{js,jsx,ts,tsx}',
     ],
   theme: {
     extend: {
