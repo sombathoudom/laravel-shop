@@ -64,7 +64,7 @@ This is a learning project that replicates the UI and flow of [Pich Pisey Shop](
 
 1. Clone the repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/sombathoudom/laravel-shop.git
 ```
 
 2. Install dependencies
