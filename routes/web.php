@@ -7,6 +7,8 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/', function () {
+
+    sleep(1);
     return inertia('Home');
 });
 
