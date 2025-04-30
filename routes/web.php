@@ -1,20 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
+Route::get('/', [HomeController::class, 'index']);
 
-    sleep(1);
-    return inertia('Home');
-});
-
-Route::get('/product', function () {
-    return inertia('ProductDetail');
-});
+Route::get('/product/{product:slug}', [HomeController::class, 'show']);
 
 Route::get('/checkout', function () {
     return inertia('Checkout');

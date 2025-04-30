@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('slug')->unique('slug');
             $table->text('description');
             $table->integer('price');
+            $table->integer('qty');
             $table->string('image');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');

@@ -5,27 +5,20 @@ import React, {
   useEffect,
   PropsWithChildren,
 } from 'react'
+import { Products } from '@/Pages/Home'
 
-interface Product {
-  id: number
-  name: string
-  price: number
-  qty: number
-  isOutOfStock: boolean
-  image: string
-}
 
 interface CardContextType {
-  cart: Product[]
-  addToCart: (product: Product) => void
+  cart: Products[]
+  addToCart: (product: Products) => void
   updateQuantity: (id: number, quantity: number) => void
-  removeProduct: (product: Product) => void
+  removeProduct: (product: Products) => void
   clearCard: () => void
 }
 
 const CartContext = createContext<CardContextType | undefined>(undefined)
 export default function CartProvider({ children }: PropsWithChildren) {
-  const [cart, setCart] = useState<Product[]>([])
+  const [cart, setCart] = useState<Products[]>([])
 
   // Load cart from localStorage on mount
   useEffect(() => {
@@ -37,7 +30,7 @@ export default function CartProvider({ children }: PropsWithChildren) {
     localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
 
-  const addToCart = (product: Product) => {
+  const addToCart = (product: Products) => {
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.id === product.id)
       if (existingItem) {
@@ -65,7 +58,7 @@ export default function CartProvider({ children }: PropsWithChildren) {
       return prevCart
     })
   }
-  const removeProduct = (product: Product) => {
+  const removeProduct = (product: Products) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== product.id))
   }
   const clearCard = () => {}

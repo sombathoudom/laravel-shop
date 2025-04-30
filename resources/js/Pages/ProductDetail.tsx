@@ -1,8 +1,12 @@
 import ProductCardList from '@/components/PoductCardList'
 import GuestLayout from '@/Layouts/GuestLayout'
-import React from 'react'
-
-function ProductDetail() {
+import { Products } from '@/Pages/Home'
+interface Props {
+    product: Products;
+    relatedProducts: Products[];
+}
+function ProductDetail(props: Props) {
+    const { product, relatedProducts } = props;
   return (
     <GuestLayout>
       <div className="grid grid-cols-2 gap-8 w-full max-w-6xl mx-auto">
@@ -39,29 +43,15 @@ function ProductDetail() {
         {/* Product Details Section */}
         <div className="space-y-6 py-4">
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold">Product Name</h1>
-            <p className="text-2xl font-semibold text-primary">$99.99</p>
+            <h1 className="text-3xl font-bold">{product.name}</h1>
+                      <p className="text-2xl font-semibold text-primary">${ product.price}</p>
           </div>
 
           <div className="space-y-4">
             <h2 className="text-xl font-semibold">Description</h2>
             <p className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              {product.description}
             </p>
-          </div>
-
-          <div className="space-y-4">
-            <h2 className="text-xl font-semibold">Size</h2>
-            <div className="flex gap-3">
-              {['S', 'M', 'L', 'XL'].map((size) => (
-                <button
-                  key={size}
-                  className="px-4 py-2 border-2 rounded-lg hover:border-primary hover:text-primary transition-colors">
-                  {size}
-                </button>
-              ))}
-            </div>
           </div>
 
           <button className="w-full bg-primary text-white py-4 rounded-xl font-semibold hover:bg-primary/90 transition-colors">
@@ -70,7 +60,7 @@ function ProductDetail() {
         </div>
       </div>
 
-      <ProductCardList />
+      <ProductCardList products={relatedProducts}/>
     </GuestLayout>
   )
 }
