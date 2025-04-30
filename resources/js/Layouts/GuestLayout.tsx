@@ -1,11 +1,6 @@
 import NavBar from '@/components/NavBar'
-import React, { PropsWithChildren } from 'react'
-import { Alert, AlertTitle } from '@/components/ui/alert'
-import { CircleDollarSign, Terminal } from 'lucide-react'
-import { useCart } from '@/context/CartContext'
-
+import { PropsWithChildren } from 'react'
 export default function GuestLayout({ children }: PropsWithChildren) {
-  const { cart } = useCart()
   return (
     <div className="flex items-stretch justify-center min-h-screen mx-auto p-4">
       <div className="heartIcon mx-auto"></div>

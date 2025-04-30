@@ -1,11 +1,10 @@
-import { useCart } from '@/context/CartContext'
 import { Menu, ShoppingBag } from 'lucide-react'
-import React from 'react'
+import { useCartStore } from '@/stores/useCartStore'
 import { Button } from './ui/button'
 import { Link } from '@inertiajs/react'
 
 function NavBar() {
-  const { cart } = useCart()
+  const { cart } = useCartStore()
   const totalQty = cart.reduce((sum, item) => sum + item.qty, 0)
   return (
     <nav className="flex -mt-4 -mb-4 mx-auto sticky top-0 border-b border-muted border-dashed z-50 bg-background justify-between items-center w-full py-4 max-2-4xl">

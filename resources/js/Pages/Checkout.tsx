@@ -1,11 +1,10 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { useCart } from '@/context/CartContext'
 import GuestLayout from '@/Layouts/GuestLayout'
 import { CircleDollarSign, Minus, Plus, ShoppingBag } from 'lucide-react'
-
+import { useCartStore } from '@/stores/useCartStore'
 const Checkout = () => {
-  const { cart, removeProduct } = useCart()
+  const { cart, removeProduct } = useCartStore()
   return (
     <GuestLayout>
       <div className="max-w-4xl mx-auto space-y-6">
