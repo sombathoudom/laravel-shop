@@ -133,7 +133,7 @@ export default function ProductCardList() {
       </div>
       {cart.length > 0 && (
         <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-full max-w-4xl px-4">
-          <a href="">
+          <Link href="/checkout">
             <Alert variant="destructive" className="w-full bg-primary">
               <AlertTitle className="flex items-center gap-2 text-white font-semibold justify-between">
                 <div className="flex gap-2">
@@ -153,7 +153,7 @@ export default function ProductCardList() {
                 </span>
               </AlertTitle>
             </Alert>
-          </a>
+          </Link>
         </div>
       )}
     </>
