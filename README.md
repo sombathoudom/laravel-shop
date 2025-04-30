@@ -2,10 +2,10 @@
 
 
           
-# Pich Pisey Shop - Learning Project
+# Laravel Inertia Ecommerce Learning
 
 ## 📝 Project Overview
-This is a learning project that replicates the UI and flow of [Pich Pisey Shop](https://pichpisey.shop/) using modern web technologies. The project serves as an educational endeavor to understand e-commerce implementation using Laravel and Inertia.js.
+A learning-focused e-commerce project built with Laravel, Inertia.js, and React+TypeScript. This project replicates the UI and flow of [Pich Pisey Shop](https://pichpisey.shop/) for educational purposes.
 
 ## 🎯 Purpose
 - Educational purposes only
