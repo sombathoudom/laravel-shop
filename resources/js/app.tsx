@@ -18,4 +18,6 @@ createInertiaApp({
     includeCSS: true,
     showSpinner: true,
   },
+}).then(() => {
+    document.getElementById('app')?.removeAttribute('data-page');
 })
