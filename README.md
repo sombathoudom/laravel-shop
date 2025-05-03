@@ -16,7 +16,7 @@ A learning-focused e-commerce project built with Laravel, Inertia.js, and React+
 ## 🛠 Tech Stack
 - **Backend:** Laravel 10
 - **Frontend:** React + TypeScript
-- **State Management:** React Context API
+- **State Management:** Zustand
 - **Routing:** Inertia.js
 - **Styling:** Tailwind CSS
 
